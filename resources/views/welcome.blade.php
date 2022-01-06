@@ -424,7 +424,7 @@
 
                 <div class="lrvl_wlcm_mid_rhtBox">
                     <div class="lrvl_wlcm_mid_rht_txtBox" id="section1">
-                        <h2>Getting Started Guides</h2>
+                        <h2> Luiza Getting Started Guides</h2>
                         <ul>
                             <li><a href="https://support.cloudways.com/how-do-i-take-my-website-live-from-cloudways/?utm_source=php-stack-page&utm_medium=php-stack-page&utm_campaign=php-stack-page" target="_blank">How Do I Take My Website Live from Cloudways</a></li>
                             <li><a href="https://support.cloudways.com/deploy-laravel-on-cloudways/?utm_source=php-stack-page&utm_medium=php-stack-page&utm_campaign=php-stack-page" target="_blank">How to Deploy Laravel Project on Cloudways Server</a></li>
