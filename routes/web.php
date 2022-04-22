@@ -22,3 +22,7 @@ Route::get('/', function () {
 });*/
  Route::get('/paradas', [LinhasController::class, 'index']);
  Route::get('/getLinha', [LinhasController::class, 'getLinha']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
