@@ -17,6 +17,7 @@
                     <table class="table">
                         <th>Codido da Linha</th>
                         <th>Nome da Linha</th>
+                        <th>Horários</th>
                         <th>Ações</th>
 
                     @foreach($linhas as $l)
@@ -25,7 +26,8 @@
                             <td>
                                 {{ $l->nomeLinha }} <br/>
                             </td>
-                            <td>Horários - Editar Linha - Excluir Linha</td>
+                            <td>Horários</td>
+                            <td>Editar Linha - Excluir Linha</td>
                         </tr>
                     @endforeach
 

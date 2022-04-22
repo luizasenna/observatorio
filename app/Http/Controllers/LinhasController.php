@@ -35,4 +35,35 @@ class LinhasController extends Controller
         'linhas' => $linhas
       ]);
     }
+
+    public function create(Request $request){
+
+
+        $new = Linha::create($request->all());
+        return redirect()->intended('/linhas/index')->with('status', 'Nova linha criada.');
+
+
+    }
+
+    public function edit(int $id){
+        $linha = Linha::findOrFail($id);
+        return view('/linhas/edit', [
+            'linha' => $linha
+        ]);
+
+    }
+
+    public function update(Request $request){
+
+
+        $linha = Linha::findOrFail($request->id);
+
+        $linha->fill($request->all());
+        $linha->save();
+
+        return redirect()->intended('/linhas/index')->with('status', 'Linha atualizada.');
+
+    }
+
+
 }
