@@ -16,3 +16,4 @@ github.pub
 composer.locky
 composer.phar
 config/database.php
+.idea/

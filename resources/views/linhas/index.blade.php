@@ -14,11 +14,22 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <table class="table">
+                        <th>Codido da Linha</th>
+                        <th>Nome da Linha</th>
+                        <th>Ações</th>
 
                     @foreach($linhas as $l)
-                    {{ $l->nomeLinha}} <br/>
+                        <tr>
+                            <td>{{ $l->sgLinha }}</td>
+                            <td>
+                                {{ $l->nomeLinha }} <br/>
+                            </td>
+                            <td>Horários - Editar Linha - Excluir Linha</td>
+                        </tr>
                     @endforeach
+
+                    </table>
                 </div>
             </div>
         </div>

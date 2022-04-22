@@ -29,7 +29,7 @@ class LinhasController extends Controller
     }
 
     public function show(){
-      $linhas = Linha::all();
+      $linhas = Linha::orderBy('sgLinha')->get();
 
       return view('linhas/index',[
         'linhas' => $linhas
