@@ -9,8 +9,12 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+
                             {{ session('status') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="<script>$('.alert').alert('close')</script>">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
                     @endif
                         <a href="/linhas/add" class="btn btn-lg btn-info float-lg-end m-3" role="button" aria-pressed="true"> Adicionar Nova Linha</a>
@@ -40,4 +44,5 @@
         </div>
     </div>
 </div>
+
 @endsection

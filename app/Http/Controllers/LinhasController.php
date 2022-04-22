@@ -40,7 +40,7 @@ class LinhasController extends Controller
 
 
         $new = Linha::create($request->all());
-        return redirect()->intended('/linhas/index')->with('status', 'Nova linha criada.');
+        return redirect()->intended('/linhas/')->with('status', 'Nova linha criada.');
 
 
     }
