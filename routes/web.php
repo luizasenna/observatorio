@@ -15,10 +15,13 @@ use App\Http\Controllers\LinhasController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-/*Route::get('/paradas', function () {
-    return view('paradas');
-});*/
+
  Route::get('/paradas', [LinhasController::class, 'index']);
  Route::get('/getLinha', [LinhasController::class, 'getLinha']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/horarios', [App\Http\Controllers\HorariosController::class, 'index'])->name('horarios');
