@@ -29,5 +29,8 @@ Route::get('/horarios', [App\Http\Controllers\HorariosController::class, 'index'
 Route::group(['prefix' => 'linhas'], function(){
 
     Route::get('/',[LinhasController::class, 'show']);
+    Route::get('edit/{id}',[LinhasController::class, 'edit']);
+
+    Route::post('update', [LinhasController::class, 'update'])->name('update');
 
 });
