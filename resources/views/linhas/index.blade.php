@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                        <a href="/linhas/add" class="btn btn-lg btn-info float-lg-end m-3" role="button" aria-pressed="true"> Adicionar Nova Linha</a>
                     <table class="table">
                         <th>Codido da Linha</th>
                         <th>Nome da Linha</th>

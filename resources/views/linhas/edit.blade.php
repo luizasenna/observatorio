@@ -38,36 +38,47 @@
 
                                             {{ csrf_field() }}
                                             <input type="hidden" name="id" class="form-control"
-                                                   aria-describedby="Name" required value="{{$linha->id}}">
+                                                   aria-describedby="id" required value="{{$linha->id}}">
                                             <div class="row m-3 align-items-center">
-                                                <div class="col-sm-1">
-                                                    <label for="name" class="col-form-label">Código da Linha</label>
+                                                <div class="col-sm-3">
+                                                    <label for="codigo" class="col-form-label">Código da Linha</label>
                                                 </div>
-                                                <div class="col-sm-11">
+                                                <div class="col-sm-9">
                                                     <input type="text" name="codigoLinha" class="form-control"
-                                                           aria-describedby="Código" required value="{{$linha->codigoLinha }}">
+                                                           aria-describedby="Código" disabled value="{{$linha->codigoLinha }}">
                                                 </div>
                                             </div>
                                             <div class="row m-3 align-items-center">
-                                                <div class="col-sm-1">
-                                                    <label for="contact" class="col-form-label">Sigla da Linha</label>
+                                                <div class="col-sm-3">
+                                                    <label for="sigla" class="col-form-label">Sigla da Linha</label>
                                                 </div>
-                                                <div class="col-sm-11">
+                                                <div class="col-sm-9">
                                                     <input type="text" name="sgLinha" class="form-control"
                                                            aria-describedby="Sigla da Linha" required value="{{ $linha->sgLinha }}">
                                                 </div>
                                             </div>
                                             <div class="row m-3 align-items-center">
                                                 <div class="col-sm-3">
+                                                    <label for="nome" class="col-form-label">Nome da Linha</label>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <input type="text" name="nomeLinha" class="form-control"
+                                                           aria-describedby="Nome da Linha" required value="{{ $linha->nomeLinha }}">
+                                                </div>
+                                            </div>
+                                            <div class="row m-3">
+                                                <div class="col-sm-3">
                                                     <label for="email" class="col-form-label">Consórcio</label>
                                                 </div>
                                                 <div class="col-sm-9">
                                                     <input type="text" name="consorcio" class="form-control"
-                                                           aria-describedby="Consorcio" required value="{{ $linha->consorcio }}">
+                                                           aria-describedby="Consorcio" value="{{ $linha->consorcio }}">
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <button class="btn btn-info" type="submit">Atualizar</button>
+                                                <a href="/linhas/" class="btn btn-danger " role="button" aria-pressed="true"> Voltar</a>
+                                                <button class="btn btn-info float-right" type="submit">Atualizar</button>
+
                                             </div>
 
 

@@ -65,5 +65,13 @@ class LinhasController extends Controller
 
     }
 
+    public function delete(int $id){
+
+        Linha::findOrFail($id)->delete();
+        return redirect()->intended('/linhas/')
+            ->with('status', 'Linha deletada com sucesso.');
+
+    }
+
 
 }
