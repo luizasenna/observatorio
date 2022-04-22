@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LinhasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+/*Route::get('/paradas', function () {
+    return view('paradas');
+});*/
+ Route::get('/paradas', [LinhasController::class, 'index']);
+ Route::get('/getLinha', [LinhasController::class, 'getLinha']);
