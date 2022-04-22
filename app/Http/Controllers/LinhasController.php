@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mapa;
+use App\Models\Mapa;
+use App\Models\Linha;
 
 class LinhasController extends Controller
 {
@@ -25,5 +26,13 @@ class LinhasController extends Controller
          'resultado' => $l
       ]);
 
+    }
+
+    public function show(){
+      $linhas = Linha::all();
+
+      return view('linhas/index',[
+        'linhas' => $linhas
+      ]);
     }
 }

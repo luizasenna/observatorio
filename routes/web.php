@@ -25,3 +25,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/horarios', [App\Http\Controllers\HorariosController::class, 'index'])->name('horarios');
+
+Route::group(['prefix' => 'linhas'], function(){
+
+    Route::get('/',[LinhasController::class, 'show']);
+
+});

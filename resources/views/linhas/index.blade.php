@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header bg-info text-white">Quadro de Horários</div>
+                <div class="card-header">Linhas</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,8 +14,11 @@
                         </div>
                     @endif
 
-
                     {{ __('You are logged in!') }}
+
+                    @foreach($linhas as $l)
+                    {{ $l->nomeLinha}} <br/>
+                    @endforeach
                 </div>
             </div>
         </div>

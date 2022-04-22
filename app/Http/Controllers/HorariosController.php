@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Horarios;
 
 class HorariosController extends Controller
 {
@@ -11,4 +12,7 @@ class HorariosController extends Controller
 
         return view('horarios.index');
     }
+
+   
+
 }
