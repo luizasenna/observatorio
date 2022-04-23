@@ -15,8 +15,7 @@ class Horario extends Model
     public $timestamps = true;
     protected $fillable = [
         'sgLinha',
-        'codigoLinha',
-        'getOrigemIda',
+        'idlinha',
         'horario'
     ];
 
