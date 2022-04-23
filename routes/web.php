@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LinhasController;
+use App\Http\Controllers\HorariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,8 @@ Route::group(['prefix' => 'linhas', 'middleware' => 'auth'], function(){
     Route::post('update', [LinhasController::class, 'update'])->name('update');
     Route::post('create', [LinhasController::class, 'create'])->name('createNew');
 
+});
+
+Route::group(['prefix' => 'horarios'], function(){
+    Route::get('/{id}', [HorariosController::class, 'show']);
 });
