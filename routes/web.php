@@ -21,6 +21,7 @@ Route::get('/', function () {
 
  Route::get('/paradas', [LinhasController::class, 'index']);
  Route::get('/getLinha', [LinhasController::class, 'getLinha']);
+ Route::get('horarios/index', [HorariosController::class, 'index']);
 
 Auth::routes();
 

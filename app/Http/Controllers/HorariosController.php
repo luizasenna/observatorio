@@ -11,7 +11,12 @@ class HorariosController extends Controller
     //
     public function index(){
 
-        return view('horarios.index');
+        $horarios = Horario::all();
+        $linhas = Linha::orderBy('sgLinha')->get();
+        return view('horarios.index',[
+            'horarios' => $horarios,
+            'linhas' => $linhas
+        ]);
     }
 
     public function show(int $id){
