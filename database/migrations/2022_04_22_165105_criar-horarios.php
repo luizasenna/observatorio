@@ -17,7 +17,7 @@ class CriarHorarios extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('sgLinha');
-            $table->integer('codigoLinha');          
+            $table->integer('idlinha')->nullable();          
             $table->string('horario');
             $table->softDeletes();
         });

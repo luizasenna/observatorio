@@ -20,8 +20,10 @@ class HorariosSeeder extends Seeder
         while (($data = fgetcsv($csvData, 555, ';')) !== false) {
             if (!$transRow) {
                 Horario::create([
-                    'sgLinha' => $data['0'],
-                    'horario' => $data['1']
+                    'id' => $data['0'],
+                    'sgLinha' => $data['3'],
+                    'idlinha' => $data['4'],
+                    'horario' => $data['5']
 
                 ]);
             }
