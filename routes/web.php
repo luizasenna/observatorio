@@ -44,6 +44,9 @@ Route::group(['prefix' => 'linhas', 'middleware' => 'auth'], function(){
 Route::group(['prefix' => 'horarios'], function(){
     Route::get('/{id}', [HorariosController::class, 'show']);
     Route::get('add/{id}', [HorariosController::class, 'add']);
+    Route::get('delete/{id}', [HorariosController::class, 'delete']);
+    Route::get('edit/{id}',[HorariosController::class, 'edit']);
 
     Route::post('create',[HorariosController::class, 'create'])->name('createNewHorario');
+    Route::post('update', [HorariosController::class, 'update'])->name('updateHorario');
 });

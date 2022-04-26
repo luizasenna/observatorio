@@ -23,4 +23,8 @@ class Horario extends Model
 
 
     protected $dates = ['deleted_at'];
+
+    public function linha(){
+        return $this->hasOne('App\Models\Linha', 'id', 'idlinha');
+    }
 }

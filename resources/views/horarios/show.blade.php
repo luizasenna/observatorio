@@ -30,8 +30,8 @@
                                         {{ $h->horario }} <br/>
                                     </td>
                                     <td>
-                                        <a href="/horario/edit/{{$h->id}}" class="btn btn-outline-secondary" role="button" aria-pressed="true"> <i class="fa-solid fa-pen-to-square"></i></a>
-                                        <a href="/horario/delete/{{$h->id}}" class="btn btn-danger" role="button" aria-pressed="true"> <i class="fa-solid fa-trash-can"></i></a>
+                                        <a href="/horarios/edit/{{$h->id}}" class="btn btn-outline-secondary" role="button" aria-pressed="true"> <i class="fa-solid fa-pen-to-square"></i></a>
+                                        <a href="/horarios/delete/{{$h->id}}" class="btn btn-danger" role="button" aria-pressed="true"> <i class="fa-solid fa-trash-can"></i></a>
                                     </td>
                                 </tr>
                             @endforeach

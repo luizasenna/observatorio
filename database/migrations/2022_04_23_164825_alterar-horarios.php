@@ -15,7 +15,7 @@ class AlterarHorarios extends Migration
     {
         Schema::table('horarios', function (Blueprint $table) {
             $table->renameColumn('codigoLinha','idlinha')->unique();
-            $table->foreign('idlinha')->references('id')->on('linhas')->onDelete('cascade');
+          //  $table->foreign('idlinha')->references('id')->on('linhas')->onDelete('cascade');
         });
     }
 

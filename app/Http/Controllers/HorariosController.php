@@ -41,5 +41,33 @@ class HorariosController extends Controller
 
     }
 
+    public function delete(int $id){
+
+        Horario::findOrFail($id)->delete();
+        return redirect()->back()
+            ->with('status', 'Linha deletada com sucesso.');
+
+    }
+
+    public function edit(int $id){
+        $horario = Horario::findOrFail($id);
+        return view('/horarios/edit', [
+            'horario' => $horario
+        ]);
+
+    }
+
+    public function update(Request $request){
+
+
+        $horario = Horario::findOrFail($request->id);
+
+        $horario->fill($request->all());
+        $horario->save();
+
+        return redirect()->intended('/horarios/'.$request->idlinha)->with('status', 'Horario atualizado.');
+
+    }
+
 
 }
