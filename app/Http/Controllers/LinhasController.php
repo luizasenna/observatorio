@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Mapa;
 use App\Models\Linha;
+use App\Models\Horario;
 
 class LinhasController extends Controller
 {
     public function index()
     {
-        $linhas = Mapa::all();
+        //$linhas = Mapa::all();
+        $linhas = Horario::groupBy('sgLinha')->orderBy('sgLinha')->get();
+       // $qtde = $linhas->count();
+       // dd($qtde);
+   
         return view('/paradas',[
            'linhas' => $linhas
         ]);
@@ -19,11 +24,16 @@ class LinhasController extends Controller
     public function getLinha(Request $request){
 
       $linha = request()->all();
-      $linhas = Mapa::orderBy('sgLinha')->get();
+      $linhas = Horario::groupBy('sgLinha')->orderBy('sgLinha')->get();
+    
+      $horarios = Horario::where('sgLinha', '=', $linha['selectLinha'])->get();
       $l = Mapa::where('sgLinha', '=' ,$linha['selectLinha'])->get();
+      
+      //dd($horarios);
       return view('/paradas',[
          'linhas' => $linhas,
-         'resultado' => $l
+         'resultado' => $l,
+         'horarios' => $horarios
       ]);
 
     }

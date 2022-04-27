@@ -9,12 +9,11 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header bg-info text-white">Quadro de Horários</div>
-                    <table class="table">
-                        <th>Linha</th>
-                        <th>Horário</th>
-                        <th>Horário</th>
-                        <th>Horário</th>
-                        <th>Horário</th>
+                <div class="table-responsive">    
+                <table class="table table-bordered" id="tabelaHorizontal" >
+                        <th style="width:600px;">Linha</th>
+                        <th>Horários</th>
+                        
                         @foreach($linhas as $l)
                           <tr>
                           <td>{{$l->sgLinha}} -  {{$l->nomeLinha ?? ''}}</td>      
@@ -27,13 +26,21 @@
                         @endforeach
                        
                     </table>
+</div>
                 
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<script>
+$(document).ready(function () {
+  $('#tabelaHorizontal').DataTable({
+    "scrollX": true
+  });
+  $('.dataTables_length').addClass('bs-select');
+});
+</script>
 
 </body>
 </html>
