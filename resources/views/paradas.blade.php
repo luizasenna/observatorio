@@ -47,15 +47,17 @@
   </div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         
-  <p class="m-4">Linha: {{ $horarios[0]->sgLinha }} - {{ $horarios[0]->linha->nomeLinha }}</p> <br/>
+  <p class="m-4">Linha: {{ $horarios[0]->sgLinha ?? 'Selecione a Linha' }} - {{ $horarios[0]->linha->nomeLinha ?? ''}}</p> <br/>
   <table class="table col-md-5">
-    @foreach($horarios as $h)
-      <tr>
-        <td>
-        {{ $h->horario }}
-        <td>
-      </tr>  
-    @endforeach
+    @if(!empty($horarios))
+        @foreach($horarios as $h)
+          <tr>
+            <td>
+            {{ $h->horario }}
+            <td>
+          </tr>  
+        @endforeach
+    @endif
   </table>
   </div>
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">c</div>
