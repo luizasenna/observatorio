@@ -45,7 +45,7 @@
                                                 </div>
                                                 <div class="col-sm-9">
                                                     <input type="text" name="codigoLinha" class="form-control"
-                                                           aria-describedby="Código" required>
+                                                           aria-describedby="Código" >
                                                 </div>
                                             </div>
                                             <div class="row m-3 align-items-center">

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterarHorarios extends Migration
+class AlterarMapas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AlterarHorarios extends Migration
      */
     public function up()
     {
-        Schema::table('horarios', function (Blueprint $table) {
-            $table->renameColumn('codigoLinha','idlinha')->unique();
-          //  $table->foreign('idlinha')->references('id')->on('linhas')->onDelete('cascade');
+        Schema::table('mapas', function (Blueprint $table) {
+            $table->integer('mapa')->unsigned()->nullable()->change();
         });
     }
 
@@ -26,7 +25,7 @@ class AlterarHorarios extends Migration
      */
     public function down()
     {
-        Schema::table('horarios', function (Blueprint $table) {
+        Schema::table('mapas', function (Blueprint $table) {
             //
         });
     }

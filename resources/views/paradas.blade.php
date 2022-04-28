@@ -40,8 +40,11 @@
       <div class="card-body" id="mapaLinha">
 
         @if(isset($resultado))
-          <iframe src="{{$resultado[0]->mapa}}" width="100%" height="480"></iframe>
+          <iframe src="{{$resultado[0]->mapa ?? 'Mapa não encontrado'}}" width="100%" height="480"></iframe>
+          @else <p>Mapa não encontrado.</p>
+          
         @endif
+       
       </div>
     </div>
   </div>

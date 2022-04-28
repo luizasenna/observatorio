@@ -50,6 +50,7 @@ class LinhasController extends Controller
 
 
         $new = Linha::create($request->all());
+        $mapa = Mapa::create($request->all());
         return redirect()->intended('/linhas/')->with('status', 'Nova linha criada.');
 
 
@@ -67,9 +68,13 @@ class LinhasController extends Controller
 
 
         $linha = Linha::findOrFail($request->id);
+        $mapa = Mapa::findOrFail($request->sgLinha);
 
         $linha->fill($request->all());
         $linha->save();
+
+        $mapa->fill($request->all());
+        $mapa->save();
 
         return redirect()->intended('/linhas/index')->with('status', 'Linha atualizada.');
 
