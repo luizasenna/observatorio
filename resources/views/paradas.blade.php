@@ -39,7 +39,7 @@
   <div class="card">
       <div class="card-body" id="mapaLinha">
 
-        @if(isset($resultado))
+        @if(!empty($resultado[0]->mapa))
           <iframe src="{{$resultado[0]->mapa ?? 'Mapa não encontrado'}}" width="100%" height="480"></iframe>
           @else <p>Mapa não encontrado.</p>
           
@@ -60,6 +60,8 @@
             <td>
           </tr>  
         @endforeach
+        @else 
+          <p>Horários Não encontrados.</p>
     @endif
   </table>
   </div>
